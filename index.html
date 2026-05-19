@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8" />
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0" />
+
+<title>
+NUMERA | Firma financiera moderna
+</title>
+
+<meta
+name="description"
+content="Automatización contable y financiera para negocios modernos." />
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* ========================= */
+/* VARIABLES */
+/* ========================= */
+
+:root {
+
+  --bg: #07111F;
+
+  --bg2: #0B1730;
+
+  --card:
+  rgba(255,255,255,0.05);
+
+  --border:
+  rgba(255,255,255,0.08);
+
+  --text: #ffffff;
+
+  --muted:
+  rgba(255,255,255,.72);
+
+  --accent: #7C6CFF;
+
+  --accent2: #5B4DFF;
+
+  --soft: #C9C2FF;
+}
+
+* {
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+html {
+
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family: 'Inter', sans-serif;
+
+  background: white;
+
+  color: #0f172a;
+
+  overflow-x: hidden;
+}
+
+/* ========================= */
+/* HERO BG */
+/* ========================= */
+
+.hero-bg {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+  radial-gradient(circle at top left,
+  rgba(124,108,255,.20),
+  transparent 30%),
+
+  radial-gradient(circle at bottom right,
+  rgba(91,77,255,.18),
+  transparent 30%),
+
+  linear-gradient(
+  180deg,
+  var(--bg),
+  var(--bg2));
+
+  overflow: hidden;
+}
+
+.hero-grid-bg {
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+  linear-gradient(
+  rgba(255,255,255,.04) 1px,
+  transparent 1px),
+
+  linear-gradient(
+  90deg,
+  rgba(255,255,255,.04) 1px,
+  transparent 1px);
+
+  background-size: 60px 60px;
+
+  opacity: .35;
+}
+
+/* ========================= */
+/* NAVBAR */
+/* ========================= */
+
+.navbar {
+
+  position: fixed;
+
+  top: 0;
+
+  width: 100%;
+
+  z-index: 999;
+
+  backdrop-filter: blur(14px);
+
+  background:
+  rgba(7,17,31,.82);
+
+  border-bottom:
+  1px solid rgba(255,255,255,.06);
+}
+
+.nav-container {
+
+  width: 92%;
+
+  max-width: 1280px;
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 18px 0;
+}
+
+.logo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  text-decoration: none;
+}
+
+.logo-box {
+
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 14px;
+
+  background:
+  linear-gradient(
+  135deg,
+  var(--accent),
+  #B5ACFF);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+  font-weight: 800;
+}
+
+.logo span {
+
+  color: white;
+
+  font-size: 1.2rem;
+
+  font-weight: 700;
+}
+
+.nav-links {
+
+  display: flex;
+
+  gap: 38px;
+}
+
+.nav-links a {
+
+  color:
+  rgba(255,255,255,.75);
+
+  text-decoration: none;
+
+  font-weight: 500;
+
+  transition: .3s;
+}
+
+.nav-links a:hover {
+
+  color: white;
+}
+
+.nav-btn {
+
+  background:
+  linear-gradient(
+  135deg,
+  var(--accent),
+  var(--accent2));
+
+  color: white;
+
+  padding: 14px 24px;
+
+  border-radius: 16px;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: .3s;
+}
+
+.nav-btn:hover {
+
+  transform:
+  translateY(-3px);
+}
+
+/* ========================= */
+/* HERO */
+/* ========================= */
+
+.hero {
+
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.hero-content {
+
+  width: 92%;
+
+  max-width: 1280px;
+
+  margin: auto;
+
+  position: relative;
+
+  z-index: 2;
+
+  padding-top: 130px;
+
+  padding-bottom: 100px;
+}
+
+.hero-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 12px 20px;
+
+  border-radius: 999px;
+
+  background:
+  rgba(255,255,255,.06);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  color: #D9D1FF;
+
+  font-size: .9rem;
+
+  font-weight: 600;
+
+  backdrop-filter: blur(12px);
+
+  margin-bottom: 28px;
+}
+
+.hero h1 {
+
+  color: white;
+
+  font-size:
+  clamp(3.2rem,7vw,6rem);
+
+  line-height: .98;
+
+  max-width: 950px;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+}
+
+.gradient {
+
+  background:
+  linear-gradient(
+  135deg,
+  #B9A7FF,
+  #6D7DFF);
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+
+  color: var(--muted);
+
+  max-width: 820px;
+
+  font-size: 1.15rem;
+
+  line-height: 1.9;
+
+  margin-top: 34px;
+}
+
+.hero-mini-badge {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 28px;
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  background:
+  rgba(255,255,255,.06);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  color:
+  rgba(255,255,255,.82);
+
+  font-size: .95rem;
+
+  backdrop-filter: blur(12px);
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.hero-buttons {
+
+  display: flex;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+
+  margin-top: 44px;
+}
+
+.btn-primary {
+
+  background:
+  linear-gradient(
+  135deg,
+  var(--accent),
+  var(--accent2));
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 18px 30px;
+
+  border-radius: 18px;
+
+  font-weight: 700;
+
+  transition: .35s;
+}
+
+.btn-primary:hover {
+
+  transform:
+  translateY(-4px);
+}
+
+.btn-secondary {
+
+  background:
+  rgba(255,255,255,.06);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 18px 30px;
+
+  border-radius: 18px;
+
+  font-weight: 600;
+
+  transition: .35s;
+}
+
+.btn-secondary:hover {
+
+  transform:
+  translateY(-4px);
+}
+
+/* ========================= */
+/* FEATURES */
+/* ========================= */
+
+.hero-features {
+
+  margin-top: 70px;
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit,
+  minmax(280px,1fr));
+
+  gap: 24px;
+}
+
+.feature-box {
+
+  position: relative;
+
+  background:
+  rgba(255,255,255,0.05);
+
+  border:
+  1px solid rgba(255,255,255,0.08);
+
+  border-radius: 28px;
+
+  padding: 34px;
+
+  backdrop-filter: blur(14px);
+
+  overflow: hidden;
+
+  transition: .4s ease;
+}
+
+.feature-box::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+  linear-gradient(
+  135deg,
+  rgba(124,108,255,0.15),
+  transparent);
+
+  opacity: 0;
+
+  transition: .4s;
+}
+
+.feature-box:hover {
+
+  transform:
+  translateY(-8px);
+
+  border-color:
+  rgba(124,108,255,.35);
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,.25);
+}
+
+.feature-box:hover::before {
+
+  opacity: 1;
+}
+
+.feature-icon {
+
+  width: 62px;
+
+  height: 62px;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+  linear-gradient(
+  135deg,
+  rgba(124,108,255,.25),
+  rgba(124,108,255,.1));
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  font-size: 1.4rem;
+
+  margin-bottom: 24px;
+}
+
+.feature-box h3 {
+
+  color: white;
+
+  font-size: 1.3rem;
+
+  margin-bottom: 14px;
+}
+
+.feature-box p {
+
+  color:
+  rgba(255,255,255,.68);
+
+  line-height: 1.8;
+}
+
+/* ========================= */
+/* STATS */
+/* ========================= */
+
+.stats {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 90px;
+
+  flex-wrap: wrap;
+
+  margin-top: 90px;
+}
+
+.stat {
+
+  text-align: center;
+}
+
+.stat h2 {
+
+  color: white;
+
+  font-size: 2.2rem;
+}
+
+.stat p {
+
+  margin-top: 10px;
+
+  color:
+  rgba(255,255,255,.68);
+}
+
+/* ========================= */
+/* GENERAL */
+/* ========================= */
+
+.section {
+
+  padding: 120px 0;
+}
+
+.container {
+
+  width: 92%;
+
+  max-width: 1280px;
+
+  margin: auto;
+}
+
+.section-title {
+
+  text-align: center;
+
+  margin-bottom: 70px;
+}
+
+.section-title span {
+
+  color: var(--accent);
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.section-title h2 {
+
+  font-size:
+  clamp(2.4rem,5vw,4rem);
+
+  margin-top: 18px;
+}
+
+.section-title p {
+
+  color: #64748b;
+
+  max-width: 720px;
+
+  margin: 22px auto 0;
+
+  line-height: 1.8;
+}
+
+/* ========================= */
+/* SERVICES */
+/* ========================= */
+
+.services-grid {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit,
+  minmax(300px,1fr));
+
+  gap: 28px;
+}
+
+.card {
+
+  background: white;
+
+  border:
+  1px solid #e9edf5;
+
+  border-radius: 28px;
+
+  padding: 38px;
+
+  transition: .35s;
+}
+
+.card:hover {
+
+  transform:
+  translateY(-10px);
+
+  box-shadow:
+  0 25px 60px rgba(15,23,42,.08);
+}
+
+.service-icon {
+
+  width: 70px;
+
+  height: 70px;
+
+  border-radius: 20px;
+
+  background:
+  linear-gradient(
+  135deg,
+  var(--accent),
+  var(--accent2));
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: white;
+
+  font-size: 1.5rem;
+
+  margin-bottom: 26px;
+}
+
+.card h3 {
+
+  font-size: 1.4rem;
+
+  margin-bottom: 16px;
+}
+
+.card p {
+
+  color: #64748b;
+
+  line-height: 1.8;
+}
+
+/* ========================= */
+/* DARK SECTION */
+/* ========================= */
+
+.dark-section {
+
+  background:
+  linear-gradient(
+  180deg,
+  var(--bg),
+  var(--bg2));
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.dark-section::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+  linear-gradient(
+  rgba(255,255,255,.04) 1px,
+  transparent 1px),
+
+  linear-gradient(
+  90deg,
+  rgba(255,255,255,.04) 1px,
+  transparent 1px);
+
+  background-size: 60px 60px;
+
+  opacity: .25;
+}
+
+.dark-content {
+
+  position: relative;
+
+  z-index: 2;
+}
+
+/* ========================= */
+/* CONTACT */
+/* ========================= */
+
+.contact-grid {
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit,
+  minmax(300px,1fr));
+
+  gap: 28px;
+}
+
+.contact-card {
+
+  background: white;
+
+  border:
+  1px solid #e9edf5;
+
+  border-radius: 28px;
+
+  padding: 40px;
+
+  transition: .35s;
+}
+
+.contact-card:hover {
+
+  transform:
+  translateY(-8px);
+
+  box-shadow:
+  0 20px 60px rgba(15,23,42,.08);
+}
+
+.contact-card h3 {
+
+  margin-top: 24px;
+
+  margin-bottom: 14px;
+
+  font-size: 1.4rem;
+}
+
+.contact-card p {
+
+  color: #64748b;
+
+  line-height: 1.8;
+
+  margin-bottom: 24px;
+}
+
+.contact-card a {
+
+  color: var(--accent2);
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+/* ========================= */
+/* FOOTER */
+/* ========================= */
+
+footer {
+
+  background:
+  linear-gradient(
+  180deg,
+  var(--bg2),
+  #050b15);
+
+  padding: 90px 0 40px;
+}
+
+.footer-grid {
+
+  width: 92%;
+
+  max-width: 1280px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit,
+  minmax(250px,1fr));
+
+  gap: 40px;
+}
+
+.footer-logo {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 24px;
+}
+
+.footer-logo span {
+
+  color: white;
+
+  font-size: 1.2rem;
+
+  font-weight: 700;
+}
+
+.footer-text {
+
+  color:
+  rgba(255,255,255,.65);
+
+  line-height: 1.9;
+}
+
+.footer-title {
+
+  color: white;
+
+  margin-bottom: 24px;
+}
+
+.footer-links {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.footer-links a {
+
+  text-decoration: none;
+
+  color:
+  rgba(255,255,255,.68);
+}
+
+.footer-bottom {
+
+  width: 92%;
+
+  max-width: 1280px;
+
+  margin: 60px auto 0;
+
+  padding-top: 30px;
+
+  border-top:
+  1px solid rgba(255,255,255,.08);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  color:
+  rgba(255,255,255,.45);
+}
+
+/* ========================= */
+/* WHATSAPP */
+/* ========================= */
+
+.whatsapp-float {
+
+  position: fixed;
+
+  right: 24px;
+
+  bottom: 24px;
+
+  z-index: 999;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 16px 24px;
+
+  border-radius: 999px;
+
+  text-decoration: none;
+
+  color: white;
+
+  font-weight: 700;
+
+  background:
+  linear-gradient(
+  135deg,
+  #25D366,
+  #18b956);
+
+  box-shadow:
+  0 15px 40px rgba(37,211,102,.35);
+
+  transition: .35s;
+}
+
+.whatsapp-float:hover {
+
+  transform:
+  translateY(-5px)
+  scale(1.03);
+}
+
+.wa-icon {
+
+  width: 34px;
+
+  height: 34px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+  rgba(255,255,255,.18);
+}
+
+/* ========================= */
+/* ANIMATIONS */
+/* ========================= */
+
+.fade-up {
+
+  animation:
+  fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+    translateY(30px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+    translateY(0);
+  }
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width: 980px){
+
+  .nav-links {
+
+    display: none;
+  }
+
+  .hero h1 {
+
+    font-size: 3.5rem;
+  }
+
+  .stats {
+
+    gap: 40px;
+  }
+}
+
+@media(max-width: 700px){
+
+  .hero h1 {
+
+    font-size: 3rem;
+  }
+
+  .hero-content {
+
+    padding-top: 120px;
+  }
+
+  .section {
+
+    padding: 90px 0;
+  }
+
+  .nav-container {
+
+    padding: 16px 0;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- NAVBAR -->
+<!-- ========================= -->
+
+<nav class="navbar">
+
+<div class="nav-container">
+
+<a href="#"
+class="logo">
+
+<div class="logo-box">
+N
+</div>
+
+<span>
+NUMERA
+</span>
+
+</a>
+
+<div class="nav-links">
+
+<a href="#inicio">
+Inicio
+</a>
+
+<a href="#servicios">
+Servicios
+</a>
+
+<a href="#metodologia">
+Metodología
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
+
+</div>
+
+<a
+class="nav-btn"
+href="https://wa.me/529514018492"
+target="_blank">
+
+Agendar asesoría
+
+</a>
+
+</div>
+
+</nav>
+
+<!-- ========================= -->
+<!-- HERO -->
+<!-- ========================= -->
+
+<section
+class="hero"
+id="inicio">
+
+<div class="hero-bg"></div>
+
+<div class="hero-grid-bg"></div>
+
+<div class="hero-content">
+
+<div class="hero-badge fade-up">
+
+● CONTABILIDAD · FINANZAS · AUTOMATIZACIÓN
+
+</div>
+
+<h1 class="fade-up">
+
+Automatización
+contable y financiera
+para
+
+<span class="gradient">
+
+negocios modernos.
+
+</span>
+
+</h1>
+
+<p class="fade-up">
+
+NUMERA integra estrategia financiera, contabilidad y automatización para optimizar la operación de negocios y emprendedores.
+
+</p>
+
+<div class="hero-mini-badge fade-up">
+
+✔ Contabilidad a medida, confianza en cada número.
+
+</div>
+
+<div class="hero-buttons fade-up">
+
+<a
+class="btn-primary"
+href="https://wa.me/529514018492"
+target="_blank">
+
+Hablar con NUMERA
+
+</a>
+
+<a
+class="btn-secondary"
+href="https://linktr.ee/SERVICIOS_CONTABLES_NUMERA"
+target="_blank">
+
+Otros medios de contacto
+
+</a>
+
+</div>
+
+<!-- FEATURES -->
+
+<div class="hero-features">
+
+<div class="feature-box fade-up">
+
+<div class="feature-icon">
+📊
+</div>
+
+<h3>
+
+Contabilidad a medida
+
+</h3>
+
+<p>
+
+Procesos financieros diseñados específicamente para la operación y crecimiento de tu negocio.
+
+</p>
+
+</div>
+
+<div class="feature-box fade-up">
+
+<div class="feature-icon">
+🛡️
+</div>
+
+<h3>
+
+Confianza en cada número
+
+</h3>
+
+<p>
+
+Información financiera clara, organizada y respaldada por cumplimiento fiscal estratégico.
+
+</p>
+
+</div>
+
+<div class="feature-box fade-up">
+
+<div class="feature-icon">
+⚡
+</div>
+
+<h3>
+
+Automatización inteligente
+
+</h3>
+
+<p>
+
+Reducimos procesos manuales mediante herramientas modernas y automatización administrativa.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- STATS -->
+
+<div class="stats fade-up">
+
+<div class="stat">
+
+<h2>
+100%
+</h2>
+
+<p>
+Cumplimiento fiscal
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+3x
+</h2>
+
+<p>
+Procesos más eficientes
+</p>
+
+</div>
+
+<div class="stat">
+
+<h2>
+24h
+</h2>
+
+<p>
+Tiempo de respuesta
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- SERVICIOS -->
+<!-- ========================= -->
+
+<section
+class="section"
+id="servicios">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>
+SERVICIOS
+</span>
+
+<h2>
+
+Todo lo que tu negocio necesita.
+
+</h2>
+
+<p>
+
+Soluciones financieras modernas enfocadas en automatización, claridad y crecimiento empresarial.
+
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div class="card">
+
+<div class="service-icon">
+📘
+</div>
+
+<h3>
+
+Contabilidad financiera
+
+</h3>
+
+<p>
+
+Gestión contable integral orientada a claridad financiera y control operativo.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="service-icon">
+📄
+</div>
+
+<h3>
+
+Consultoría fiscal
+
+</h3>
+
+<p>
+
+Planeación y cumplimiento fiscal estratégico para personas físicas y negocios.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="service-icon">
+💼
+</div>
+
+<h3>
+
+Nómina y seguridad social
+
+</h3>
+
+<p>
+
+Administración de nómina, IMSS y procesos laborales relacionados.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="service-icon">
+📈
+</div>
+
+<h3>
+
+Asesoría financiera
+
+</h3>
+
+<p>
+
+Análisis financiero para mejorar estabilidad y crecimiento empresarial.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="service-icon">
+⚙️
+</div>
+
+<h3>
+
+Automatización administrativa
+
+</h3>
+
+<p>
+
+Optimización de procesos y flujo de información financiera.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="service-icon">
+🚀
+</div>
+
+<h3>
+
+Planeación estratégica
+
+</h3>
+
+<p>
+
+Acompañamiento financiero y administrativo para negocios modernos.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- METODOLOGÍA -->
+<!-- ========================= -->
+
+<section
+class="section dark-section"
+id="metodologia">
+
+<div class="dark-content">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>
+METODOLOGÍA
+</span>
+
+<h2 style="color:white;">
+
+Cómo trabajamos.
+
+</h2>
+
+<p style="color:rgba(255,255,255,.7);">
+
+Un proceso estructurado para integrar tus finanzas con claridad y precisión.
+
+</p>
+
+</div>
+
+<div class="services-grid">
+
+<div
+class="card"
+style="
+background:transparent;
+border:1px solid rgba(255,255,255,.12);
+color:white;
+">
+
+<div class="service-icon">
+🔎
+</div>
+
+<h3>
+
+Diagnóstico integral
+
+</h3>
+
+<p style="color:rgba(255,255,255,.7);">
+
+Analizamos la situación financiera y fiscal del negocio para identificar oportunidades.
+
+</p>
+
+</div>
+
+<div
+class="card"
+style="
+background:transparent;
+border:1px solid rgba(255,255,255,.12);
+color:white;
+">
+
+<div class="service-icon">
+🧠
+</div>
+
+<h3>
+
+Integración estratégica
+
+</h3>
+
+<p style="color:rgba(255,255,255,.7);">
+
+Diseñamos procesos organizados y eficientes adaptados a cada operación.
+
+</p>
+
+</div>
+
+<div
+class="card"
+style="
+background:transparent;
+border:1px solid rgba(255,255,255,.12);
+color:white;
+">
+
+<div class="service-icon">
+📡
+</div>
+
+<h3>
+
+Gestión continua
+
+</h3>
+
+<p style="color:rgba(255,255,255,.7);">
+
+Damos seguimiento constante para mantener estabilidad y control financiero.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- CONTACTO -->
+<!-- ========================= -->
+
+<section
+class="section"
+id="contacto">
+
+<div class="container">
+
+<div class="section-title">
+
+<span>
+CONTACTO
+</span>
+
+<h2>
+
+Conversemos sobre tu negocio.
+
+</h2>
+
+<p>
+
+NUMERA combina estrategia financiera, automatización y herramientas modernas para optimizar la operación de negocios.
+
+</p>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<div class="service-icon">
+💬
+</div>
+
+<h3>
+
+WhatsApp
+
+</h3>
+
+<p>
+
+Respuesta rápida para consultas y asesoría inmediata.
+
+</p>
+
+<a
+href="https://wa.me/529514018492"
+target="_blank">
+
+Escribir ahora →
+
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<div class="service-icon">
+✉️
+</div>
+
+<h3>
+
+Correo electrónico
+
+</h3>
+
+<p>
+
+Para consultas formales y documentación de proyectos.
+
+</p>
+
+<a
+href="mailto:contacto@numera.mx">
+
+Enviar correo →
+
+</a>
+
+</div>
+
+<div class="contact-card">
+
+<div class="service-icon">
+🌐
+</div>
+
+<h3>
+
+Otros medios de contacto
+
+</h3>
+
+<p>
+
+Conoce todos nuestros canales y redes oficiales.
+
+</p>
+
+<a
+href="https://linktr.ee/SERVICIOS_CONTABLES_NUMERA"
+target="_blank">
+
+Ver medios →
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+
+<div class="footer-logo">
+
+<div class="logo-box">
+N
+</div>
+
+<span>
+NUMERA
+</span>
+
+</div>
+
+<p class="footer-text">
+
+Firma financiera moderna enfocada en automatización, claridad y crecimiento empresarial.
+
+</p>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Navegación
+
+</h3>
+
+<div class="footer-links">
+
+<a href="#inicio">
+Inicio
+</a>
+
+<a href="#servicios">
+Servicios
+</a>
+
+<a href="#metodologia">
+Metodología
+</a>
+
+<a href="#contacto">
+Contacto
+</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h3 class="footer-title">
+
+Contacto
+
+</h3>
+
+<div class="footer-links">
+
+<a href="mailto:contacto@numera.mx">
+
+contacto@numera.mx
+
+</a>
+
+<a
+href="https://instagram.com/numera_contadores"
+target="_blank">
+
+Instagram
+
+</a>
+
+<a
+href="https://linktr.ee/SERVICIOS_CONTABLES_NUMERA"
+target="_blank">
+
+Linktree
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+
+<p>
+
+© 2026 NUMERA. Todos los derechos reservados.
+
+</p>
+
+<p>
+
+Contabilidad · Fiscal · Finanzas · Automatización
+
+</p>
+
+</div>
+
+</footer>
+
+<!-- ========================= -->
+<!-- WHATSAPP FLOAT -->
+<!-- ========================= -->
+
+<a
+class="whatsapp-float"
+href="https://wa.me/529514018492"
+target="_blank">
+
+<span class="wa-icon">
+💬
+</span>
+
+WhatsApp
+
+</a>
+
+</body>
+
+</html>
