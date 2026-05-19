@@ -1,560 +1,558 @@
-<p>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;es&quot;&gt;</p>
-<p>&lt;head&gt;</p>
-<p>&nbsp; &lt;meta charset=&quot;UTF-8&quot; /&gt;</p>
-<p>&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;</p>
-<p>&nbsp; &lt;title&gt;NUMERA &mdash; Firma financiera moderna&lt;/title&gt;</p>
-<p>&nbsp; &lt;meta name=&quot;description&quot; content=&quot;Automatizaci&oacute;n ******** y financiera para ******** modernos.&quot; /&gt; &lt;**** rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;</p>
-<p>&nbsp; &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;</p>
-<p>&nbsp; &lt;**** href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt; &lt;style&gt;</p>
-<p>&nbsp; &nbsp; :root {</p>
-<p>&nbsp; &nbsp; &nbsp; --bg: #0E223A;</p>
-<p>&nbsp; &nbsp; &nbsp; --card: rgba(255,255,255,0.06);</p>
-<p>&nbsp; &nbsp; &nbsp; --card-border: rgba(255,255,255,0.08);</p>
-<p>&nbsp; &nbsp; &nbsp; --text: #ffffff;</p>
-<p>&nbsp; &nbsp; &nbsp; --muted: #D7CFDC;</p>
-<p>&nbsp; &nbsp; &nbsp; --accent: #715AFF;</p>
-<p>&nbsp; &nbsp; &nbsp; --accent-soft: #CABDFF;</p>
-<p>&nbsp; &nbsp; &nbsp; --secondary: #5B4B6B;</p>
-<p>&nbsp; &nbsp; &nbsp; --dark-text: #3E3A4B;</p>
-<p>&nbsp; &nbsp; &nbsp; --success: #B4F3C3;</p>
-<p>&nbsp; &nbsp; &nbsp; --max-width: 1200px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; * {</p>
-<p>&nbsp; &nbsp; &nbsp; margin: 0;</p>
-<p>&nbsp; &nbsp; &nbsp; padding: 0;</p>
-<p>&nbsp; &nbsp; &nbsp; box-sizing: border-box;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; html {</p>
-<p>&nbsp; &nbsp; &nbsp; scroll-behavior: smooth;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; body {</p>
-<p>&nbsp; &nbsp; &nbsp; font-family: &apos;Inter&apos;, sans-serif;</p>
-<p>&nbsp; &nbsp; &nbsp; background: var(--bg);</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--text);</p>
-<p>&nbsp; &nbsp; &nbsp; overflow-x: hidden;</p>
-<p>&nbsp; &nbsp; &nbsp; line-height: 1.6;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .glow {</p>
-<p>&nbsp; &nbsp; &nbsp; position: fixed;</p>
-<p>&nbsp; &nbsp; &nbsp; width: 600px;</p>
-<p>&nbsp; &nbsp; &nbsp; height: 600px;</p>
-<p>&nbsp; &nbsp; &nbsp; background: radial-gradient(circle, rgba(113,90,255,0.18) 0%, rgba(113,90,255,0) 70%);</p>
-<p>&nbsp; &nbsp; &nbsp; filter: blur(40px);</p>
-<p>&nbsp; &nbsp; &nbsp; z-index: -1;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .glow-1 {</p>
-<p>&nbsp; &nbsp; &nbsp; top: -150px;</p>
-<p>&nbsp; &nbsp; &nbsp; left: -150px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .glow-2 {</p>
-<p>&nbsp; &nbsp; &nbsp; bottom: -200px;</p>
-<p>&nbsp; &nbsp; &nbsp; right: -200px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .container {</p>
-<p>&nbsp; &nbsp; &nbsp; width: 90%;</p>
-<p>&nbsp; &nbsp; &nbsp; max-width: var(--max-width);</p>
-<p>&nbsp; &nbsp; &nbsp; margin: auto;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; nav {</p>
-<p>&nbsp; &nbsp; &nbsp; display: flex;</p>
-<p>&nbsp; &nbsp; &nbsp; justify-content: space-between;</p>
-<p>&nbsp; &nbsp; &nbsp; align-items: center;</p>
-<p>&nbsp; &nbsp; &nbsp; padding: 28** 0;</p>
-<p>&nbsp; &nbsp; &nbsp; position: sticky;</p>
-<p>&nbsp; &nbsp; &nbsp; top: 0;</p>
-<p>&nbsp; &nbsp; &nbsp; backdrop-filter: blur(14px);</p>
-<p>&nbsp; &nbsp; &nbsp; background: rgba(14, 34, 58, 0.65);</p>
-<p>&nbsp; &nbsp; &nbsp; z-index: 999;</p>
-<p>&nbsp; &nbsp; &nbsp; border-bottom: 1px solid rgba(255,255,255,0.05);</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .logo {</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 1.3rem;</p>
-<p>&nbsp; &nbsp; &nbsp; font-weight: 700;</p>
-<p>&nbsp; &nbsp; &nbsp; letter-spacing: 4px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .nav-links {</p>
-<p>&nbsp; &nbsp; &nbsp; display: flex;</p>
-<p>&nbsp; &nbsp; &nbsp; gap: 28px;</p>
-<p>&nbsp; &nbsp; &nbsp; align-items: center;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .nav-links a {</p>
-<p>&nbsp; &nbsp; &nbsp; text-decoration: none;</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--muted);</p>
-<p>&nbsp; &nbsp; &nbsp; transition: 0.3s ease;</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 0.95rem;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .nav-links a:hover {</p>
-<p>&nbsp; &nbsp; &nbsp; color: white;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .hero {</p>
-<p>&nbsp; &nbsp; &nbsp; min-height: 92vh;</p>
-<p>&nbsp; &nbsp; &nbsp; display: flex;</p>
-<p>&nbsp; &nbsp; &nbsp; align-items: center;</p>
-<p>&nbsp; &nbsp; &nbsp; position: relative;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .hero-grid {</p>
-<p>&nbsp; &nbsp; &nbsp; display: grid;</p>
-<p>&nbsp; &nbsp; &nbsp; grid-template-columns: 1.2fr 0.8fr;</p>
-<p>&nbsp; &nbsp; &nbsp; gap: 60px;</p>
-<p>&nbsp; &nbsp; &nbsp; align-items: center;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .eyebrow {</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--accent-soft);</p>
-<p>&nbsp; &nbsp; &nbsp; letter-spacing: 2px;</p>
-<p>&nbsp; &nbsp; &nbsp; text-transform: uppercase;</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 0.8rem;</p>
-<p>&nbsp; &nbsp; &nbsp; margin-bottom: 20px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; h1 {</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: clamp(3rem, 8vw, 6rem);</p>
-<p>&nbsp; &nbsp; &nbsp; line-height: 0.95;</p>
-<p>&nbsp; &nbsp; &nbsp; margin-bottom: 28px;</p>
-<p>&nbsp; &nbsp; &nbsp; letter-spacing: -3px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .hero p {</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--muted);</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 1.1rem;</p>
-<p>&nbsp; &nbsp; &nbsp; max-width: 620px;</p>
-<p>&nbsp; &nbsp; &nbsp; margin-bottom: 36px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .buttons {</p>
-<p>&nbsp; &nbsp; &nbsp; display: flex;</p>
-<p>&nbsp; &nbsp; &nbsp; flex-wrap: wrap;</p>
-<p>&nbsp; &nbsp; &nbsp; gap: 16px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .btn {</p>
-<p>&nbsp; &nbsp; &nbsp; padding: 14px 24px;</p>
-<p>&nbsp; &nbsp; &nbsp; border-radius: 999px;</p>
-<p>&nbsp; &nbsp; &nbsp; text-decoration: none;</p>
-<p>&nbsp; &nbsp; &nbsp; transition: 0.3s ease;</p>
-<p>&nbsp; &nbsp; &nbsp; font-weight: 600;</p>
-<p>&nbsp; &nbsp; &nbsp; border: 1px ***** transparent;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .btn-primary {</p>
-<p>&nbsp; &nbsp; &nbsp; background: var(--accent);</p>
-<p>&nbsp; &nbsp; &nbsp; color: white;</p>
-<p>&nbsp; &nbsp; &nbsp; box-shadow: 0 0 3*** rgba(113,90,255,0.35);</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .btn-primary:hover {</p>
-<p>&nbsp; &nbsp; &nbsp; transform: translateY(-2px);</p>
-<p>&nbsp; &nbsp; &nbsp; box-shadow: 0 0 5*** rgba(113,90,255,0.5);</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .btn-secondary {</p>
-<p>&nbsp; &nbsp; &nbsp; border: 1px ***** rgba(255,255,255,0.12);</p>
-<p>&nbsp; &nbsp; &nbsp; color: white;</p>
-<p>&nbsp; &nbsp; &nbsp; background: rgba(255,255,255,0.03);</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .hero-card {</p>
-<p>&nbsp; &nbsp; &nbsp; background: var(--card);</p>
-<p>&nbsp; &nbsp; &nbsp; border: *** solid var(--card-border);</p>
-<p>&nbsp; &nbsp; &nbsp; border-radius: 28px;</p>
-<p>&nbsp; &nbsp; &nbsp; padding: 32px;</p>
-<p>&nbsp; &nbsp; &nbsp; backdrop-filter: blur(16px);</p>
-<p>&nbsp; &nbsp; &nbsp; box-shadow: 0 10px 60px rgba(0,0,0,0.25);</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .metric {</p>
-<p>&nbsp; &nbsp; &nbsp; margin-bottom: 28px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .metric h3 {</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 2rem;</p>
-<p>&nbsp; &nbsp; &nbsp; margin-bottom: 6px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .metric span {</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--muted);</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 0.95rem;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; section {</p>
-<p>&nbsp; &nbsp; &nbsp; padding: 120px 0;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .section-title {</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: clamp(2rem, 5vw, 3.5rem);</p>
-<p>&nbsp; &nbsp; &nbsp; margin-bottom: 18px;</p>
-<p>&nbsp; &nbsp; &nbsp; letter-spacing: -2px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .section-subtitle {</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--muted);</p>
-<p>&nbsp; &nbsp; &nbsp; max-width: 700px;</p>
-<p>&nbsp; &nbsp; &nbsp; margin-bottom: 60px;</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 1.05rem;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .services-grid {</p>
-<p>&nbsp; &nbsp; &nbsp; display: grid;</p>
-<p>&nbsp; &nbsp; &nbsp; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));</p>
-<p>&nbsp; &nbsp; &nbsp; gap: 24px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .service-card {</p>
-<p>&nbsp; &nbsp; &nbsp; background: var(--card);</p>
-<p>&nbsp; &nbsp; &nbsp; border: 1px solid var(--card-border);</p>
-<p>&nbsp; &nbsp; &nbsp; border-radius: 24px;</p>
-<p>&nbsp; &nbsp; &nbsp; padding: 32px;</p>
-<p>&nbsp; &nbsp; &nbsp; transition: 0.35s ease;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .service-card:hover {</p>
-<p>&nbsp; &nbsp; &nbsp; transform: translateY(-8px);</p>
-<p>&nbsp; &nbsp; &nbsp; border-color: rgba(113,90,255,0.5);</p>
-<p>&nbsp; &nbsp; &nbsp; box-shadow: 0 0 40px rgba(113,90,255,0.18);</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .service-number {</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--accent-soft);</p>
-<p>&nbsp; &nbsp; &nbsp; margin-bottom: 18px;</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 0.85rem;</p>
-<p>&nbsp; &nbsp; &nbsp; letter-spacing: 2px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .service-card h3 {</p>
-<p>&nbsp; &nbsp; &nbsp; margin-bottom: 14px;</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 1.35rem;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .service-card p {</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--muted);</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 0.96rem;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .methodology {</p>
-<p>&nbsp; &nbsp; &nbsp; display: grid;</p>
-<p>&nbsp; &nbsp; &nbsp; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));</p>
-<p>&nbsp; &nbsp; &nbsp; gap: 24px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .step {</p>
-<p>&nbsp; &nbsp; &nbsp; padding: 36px;</p>
-<p>&nbsp; &nbsp; &nbsp; border-left: 2px solid rgba(113,90,255,0.45);</p>
-<p>&nbsp; &nbsp; &nbsp; background: rgba(255,255,255,0.02);</p>
-<p>&nbsp; &nbsp; &nbsp; border-radius: 20px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .step span {</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--accent-soft);</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 0.8rem;</p>
-<p>&nbsp; &nbsp; &nbsp; letter-spacing: 2px;</p>
-<p>&nbsp; &nbsp; &nbsp; text-transform: uppercase;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .step h3 {</p>
-<p>&nbsp; &nbsp; &nbsp; margin: 16** 0;</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 1.5rem;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .step p {</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--muted);</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .cta {</p>
-<p>&nbsp; &nbsp; &nbsp; text-align: center;</p>
-<p>&nbsp; &nbsp; &nbsp; padding: 120px 0;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .cta-box {</p>
-<p>&nbsp; &nbsp; &nbsp; background: linear-gradient(135deg, rgba(113,90,255,0.18), rgba(255,255,255,0.04));</p>
-<p>&nbsp; &nbsp; &nbsp; border: *** solid rgba(255,255,255,0.08);</p>
-<p>&nbsp; &nbsp; &nbsp; border-radius: 32px;</p>
-<p>&nbsp; &nbsp; &nbsp; padding: 8*** 40px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .cta p {</p>
-<p>&nbsp; &nbsp; &nbsp; max-width: 700px;</p>
-<p>&nbsp; &nbsp; &nbsp; margin: 20px auto 40px;</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--muted);</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; footer {</p>
-<p>&nbsp; &nbsp; &nbsp; border-top: *** ***** rgba(255,255,255,0.08);</p>
-<p>&nbsp; &nbsp; &nbsp; padding: 40px 0;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .footer-content {</p>
-<p>&nbsp; &nbsp; &nbsp; display: flex;</p>
-<p>&nbsp; &nbsp; &nbsp; justify-content: space-between;</p>
-<p>&nbsp; &nbsp; &nbsp; flex-wrap: wrap;</p>
-<p>&nbsp; &nbsp; &nbsp; gap: 20px;</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--muted);</p>
-<p>&nbsp; &nbsp; &nbsp; font-size: 0.95rem;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .footer-links {</p>
-<p>&nbsp; &nbsp; &nbsp; display: flex;</p>
-<p>&nbsp; &nbsp; &nbsp; gap: 18px;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .footer-links a {</p>
-<p>&nbsp; &nbsp; &nbsp; color: var(--muted);</p>
-<p>&nbsp; &nbsp; &nbsp; text-decoration: none;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .footer-links a:hover {</p>
-<p>&nbsp; &nbsp; &nbsp; color: white;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .fade {</p>
-<p>&nbsp; &nbsp; &nbsp; opacity: 0;</p>
-<p>&nbsp; &nbsp; &nbsp; transform: translateY(30px);</p>
-<p>&nbsp; &nbsp; &nbsp; transition: 0.8s ease;</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; .fade.visible {</p>
-<p>&nbsp; &nbsp; &nbsp; opacity: 1;</p>
-<p>&nbsp; &nbsp; &nbsp; transform: translateY(0);</p>
-<p>&nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; @media(max-width: 900px) {</p>
-<p>&nbsp; &nbsp; &nbsp; .hero-grid {</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; grid-template-columns: 1fr;</p>
-<p>&nbsp; &nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &nbsp; .nav-links {</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; display: none;</p>
-<p>&nbsp; &nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &nbsp; h1 {</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; line-height: 1;</p>
-<p>&nbsp; &nbsp; &nbsp; }</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &nbsp; section {</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; padding: 90px 0;</p>
-<p>&nbsp; &nbsp; &nbsp; }</p>
-<p>&nbsp; &nbsp; }</p>
-<p>&nbsp; &lt;/style&gt;&lt;/head&gt;</p>
-<p>&lt;body&gt; &lt;*** class=&quot;glow glow-1&quot;&gt;&lt;/div&gt;</p>
-<p>&nbsp; &lt;div class=&quot;glow glow-2&quot;&gt;&lt;/div&gt; &lt;div class=&quot;container&quot;&gt;&lt;nav&gt;</p>
-<p>&nbsp; &lt;div class=&quot;logo&quot;&gt;NUMERA&lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &lt;div class=&quot;nav-links&quot;&gt;</p>
-<p>&nbsp; &nbsp; &lt;a href=&quot;#servicios&quot;&gt;Servicios&lt;/a&gt;</p>
-<p>&nbsp; &nbsp; &lt;a href=&quot;#metodologia&quot;&gt;Metodolog&iacute;a&lt;/a&gt;</p>
-<p>&nbsp; &nbsp; &lt;a href=&quot;#contacto&quot;&gt;Contacto&lt;/a&gt;</p>
-<p>&nbsp; &lt;/div&gt;</p>
-<p>&lt;/nav&gt;</p>
-<p><br></p>
-<p>&lt;section class=&quot;hero&quot;&gt;</p>
-<p>&nbsp; &lt;*** class=&quot;hero-grid&quot;&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;*** class=&quot;fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;div class=&quot;eyebrow&quot;&gt;Firma financiera moderna&lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &nbsp; &lt;h1&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; Automatizaci&oacute;n ******** y financiera para negocios modernos.</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/h1&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &nbsp; &lt;p&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; NUMERA integra estrategia financiera, contabilidad y automatizaci&oacute;n para optimizar ** operaci&oacute;n de negocios y emprendedores.</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &nbsp; &lt;*** class=&quot;buttons&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;a class=&quot;btn btn-primary&quot; href=&quot;https://wa.me/5210000000000&quot; target=&quot;_blank&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; WhatsApp</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;a class=&quot;*** btn-secondary&quot; href=&quot;mailto:contacto@numera.mx&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Correo</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;a class=&quot;*** btn-secondary&quot; href=&quot;#servicios&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ver servicios</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/a&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;div class=&quot;hero-card fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;div class=&quot;metric&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;+Integraci&oacute;n&lt;/h3&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Procesos financieros organizados y optimizados.&lt;/span&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &nbsp; &lt;div class=&quot;metric&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;+Estrategia&lt;/h3&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Planeaci&oacute;n fiscal y financiera orientada a crecimiento.&lt;/span&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &nbsp; &lt;div class=&quot;metric&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;+Automatizaci&oacute;n&lt;/h3&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;Flujo moderno ** informaci&oacute;n ******** y administrativa.&lt;/span&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/div&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &lt;/div&gt;</p>
-<p>&lt;/section&gt;</p>
-<p><br></p>
-<p><br></p>
-<p>&lt;******* id=&quot;servicios&quot;&gt;</p>
-<p>&nbsp; &lt;div class=&quot;fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &lt;h2 class=&quot;section-title&quot;&gt;********* estrat&eacute;gicos.&lt;/h2&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;p class=&quot;section-subtitle&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; Una estructura financiera moderna debe combinar claridad, ******* y eficiencia operativa.</p>
-<p>&nbsp; &nbsp; &lt;/p&gt;</p>
-<p>&nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &lt;div class=&quot;services-grid&quot;&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;div class=&quot;service-**** fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;div class=&quot;service-number&quot;&gt;01&lt;/div&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;h3&gt;************ y estados financieros&lt;/h3&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;p&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; Gesti&oacute;n contable orientada a claridad financiera y control operativo.</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;div class=&quot;service-**** fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;div class=&quot;service-number&quot;&gt;02&lt;/div&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;h3&gt;Consultor&iacute;a fiscal&lt;/h3&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;p&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; Planeaci&oacute;n y ************ fiscal estrat&eacute;gico para personas f&iacute;sicas y negocios.</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;div class=&quot;service-card fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;div class=&quot;service-number&quot;&gt;03&lt;/div&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;h3&gt;N&oacute;**** y seguridad social&lt;/h3&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;p&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; Administraci&oacute;n ** n&oacute;mina, IMSS y procesos laborales relacionados.</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;div class=&quot;service-card fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;div class=&quot;service-number&quot;&gt;04&lt;/div&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;h3&gt;Asesor&iacute;a financiera&lt;/h3&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;p&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; An&aacute;lisis financiero **** mejorar estabilidad y crecimiento.</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;div class=&quot;service-card fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;div class=&quot;service-number&quot;&gt;05&lt;/div&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;h3&gt;Automatizaci&oacute;n administrativa&lt;/h3&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;p&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; Optimizaci&oacute;n ** procesos y flujo de informaci&oacute;n financiera.</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &lt;/div&gt;</p>
-<p>&lt;/section&gt;</p>
-<p><br></p>
-<p><br></p>
-<p>&lt;section id=&quot;metodologia&quot;&gt;</p>
-<p>&nbsp; &lt;div class=&quot;fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &lt;h2 class=&quot;section-title&quot;&gt;C&oacute;mo trabajamos.&lt;/h2&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;p class=&quot;section-subtitle&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; ** enfoque basado en an&aacute;lisis, integraci&oacute;n estrat&eacute;gica y seguimiento continuo.</p>
-<p>&nbsp; &nbsp; &lt;/p&gt;</p>
-<p>&nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &lt;*** class=&quot;methodology&quot;&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;*** class=&quot;step fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;span&gt;01&lt;/span&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;h3&gt;Diagn&oacute;***** integral&lt;/h3&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;p&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; ********** la situaci&oacute;n financiera, contable y fiscal *** negocio.</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;div class=&quot;**** fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;span&gt;02&lt;/span&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;h3&gt;Integraci&oacute;n estrat&eacute;gica&lt;/h3&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;p&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; Dise&ntilde;amos procesos organizados y ********** adaptados a **** operaci&oacute;n.</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;div class=&quot;step fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;span&gt;03&lt;/span&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;h3&gt;Gesti&oacute;n continua&lt;/h3&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;p&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; Damos seguimiento constante para mantener estabilidad y control financiero.</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &lt;/div&gt;</p>
-<p>&lt;/section&gt;</p>
-<p><br></p>
-<p><br></p>
-<p>&lt;section class=&quot;cta&quot; id=&quot;contacto&quot;&gt;</p>
-<p>&nbsp; &lt;div class=&quot;cta-box fade&quot;&gt;</p>
-<p>&nbsp; &nbsp; &lt;h2 class=&quot;section-title&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; Conversemos sobre el futuro ********** ** tu negocio.</p>
-<p>&nbsp; &nbsp; &lt;/h2&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;p&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; NUMERA ******* tecnolog&iacute;a, ********** ********** y procesos modernos **** ********* la operaci&oacute;n de negocios y emprendedores.</p>
-<p>&nbsp; &nbsp; &lt;/p&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;div class=&quot;buttons&quot; style=&quot;justify-content:center;&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;a class=&quot;btn btn-primary&quot; href=&quot;https://wa.me/5210000000000&quot; target=&quot;_blank&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; Agendar asesor&iacute;a</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/a&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &nbsp; &lt;a class=&quot;btn btn-secondary&quot; href=&quot;mailto:contacto@numera.mx&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; contacto@numera.mx</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;/a&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p>&nbsp; &lt;/div&gt;</p>
-<p>&lt;/section&gt;</p>
-<p><br></p>
-<p><br></p>
-<p>&lt;footer&gt;</p>
-<p>&nbsp; &lt;div class=&quot;footer-content&quot;&gt;</p>
-<p>&nbsp; &nbsp; &lt;div&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;strong&gt;NUMERA&lt;/strong&gt;&lt;br&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; Oaxaca, M&eacute;xico.</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p><br></p>
-<p>&nbsp; &nbsp; &lt;div class=&quot;footer-links&quot;&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;a href=&quot;#&quot;&gt;Instagram&lt;/a&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;a href=&quot;#&quot;&gt;LinkedIn&lt;/a&gt;</p>
-<p>&nbsp; &nbsp; &nbsp; &lt;a href=&quot;mailto:contacto@numera.mx&quot;&gt;Correo&lt;/a&gt;</p>
-<p>&nbsp; &nbsp; &lt;/div&gt;</p>
-<p>&nbsp; &lt;/div&gt;</p>
-<p>&lt;/footer&gt;</p>
-<p><br></p>
-<p>&nbsp; &lt;/div&gt; &lt;script&gt;</p>
-<p>&nbsp; &nbsp; const observer = new IntersectionObserver((entries) =&gt; {</p>
-<p>&nbsp; &nbsp; &nbsp; entries.forEach(entry =&gt; {</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; if(entry.isIntersecting){</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; entry.target.classList.add(&apos;visible&apos;);</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; }</p>
-<p>&nbsp; &nbsp; &nbsp; });</p>
-<p>&nbsp; &nbsp; }, {</p>
-<p>&nbsp; &nbsp; &nbsp; threshold: 0.1</p>
-<p>&nbsp; &nbsp; });</p>
-<p><br></p>
-<p>&nbsp; &nbsp; document.querySelectorAll(&apos;.fade&apos;).forEach(el =&gt; {</p>
-<p>&nbsp; &nbsp; &nbsp; observer.observe(el);</p>
-<p>&nbsp; &nbsp; });</p>
-<p>&nbsp; &lt;/script&gt;&lt;/body&gt;</p>
-<p>&lt;/html&gt;</p>
-<div style="color: red">Prueba de Word a HTML - por favor <a href="https://wordtohtml.net/site/payment">Go PRO</a> para obtener el HTML completo.</div>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>NUMERA — Firma financiera moderna</title>
+
+  <meta name="description"
+    content="Automatización contable y financiera para negocios modernos." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    :root {
+      --bg: #0E223A;
+      --card: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #ffffff;
+      --muted: #D7CFDC;
+      --accent: #715AFF;
+      --soft: #CABDFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    .glow {
+      position: fixed;
+      width: 500px;
+      height: 500px;
+      background:
+        radial-gradient(circle,
+          rgba(113, 90, 255, 0.2) 0%,
+          rgba(113, 90, 255, 0) 70%);
+      filter: blur(40px);
+      z-index: -1;
+    }
+
+    .glow1 {
+      top: -150px;
+      left: -150px;
+    }
+
+    .glow2 {
+      bottom: -150px;
+      right: -150px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 28px 0;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--soft);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin-bottom: 36px;
+      max-width: 620px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 0 30px rgba(113, 90, 255, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.12);
+      color: white;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .hero-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 32px;
+      backdrop-filter: blur(14px);
+    }
+
+    .metric {
+      margin-bottom: 28px;
+    }
+
+    .metric h3 {
+      font-size: 2rem;
+      margin-bottom: 6px;
+    }
+
+    .metric span {
+      color: var(--muted);
+    }
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 18px;
+      letter-spacing: -2px;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      margin-bottom: 50px;
+      max-width: 700px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 32px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(113,90,255,0.4);
+    }
+
+    .number {
+      color: var(--soft);
+      margin-bottom: 18px;
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+    }
+
+    .card h3 {
+      margin-bottom: 14px;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .step {
+      padding: 36px;
+      border-left: 2px solid rgba(113,90,255,0.5);
+      background: rgba(255,255,255,0.03);
+      border-radius: 20px;
+    }
+
+    .step span {
+      color: var(--soft);
+      letter-spacing: 2px;
+      font-size: 0.8rem;
+    }
+
+    .step h3 {
+      margin: 16px 0;
+      font-size: 1.5rem;
+    }
+
+    .step p {
+      color: var(--muted);
+    }
+
+    .cta {
+      text-align: center;
+    }
+
+    .cta-box {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(113,90,255,0.18),
+          rgba(255,255,255,0.04)
+        );
+
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 30px;
+      padding: 80px 40px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 20px auto 40px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 40px 0;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    @media(max-width: 900px) {
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      h1 {
+        line-height: 1;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="glow glow1"></div>
+  <div class="glow glow2"></div>
+
+  <div class="container">
+
+    <nav>
+
+      <div class="logo">
+        NUMERA
+      </div>
+
+      <div class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#metodologia">Metodología</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+
+    </nav>
+
+    <section class="hero">
+
+      <div class="hero-grid">
+
+        <div>
+
+          <div class="eyebrow">
+            Firma financiera moderna
+          </div>
+
+          <h1>
+            Automatización contable y financiera para negocios modernos.
+          </h1>
+
+          <p>
+            NUMERA integra estrategia financiera, contabilidad y automatización para optimizar la operación de negocios y emprendedores.
+          </p>
+
+          <div class="buttons">
+
+            <a class="btn btn-primary"
+              href="https://wa.me/5210000000000"
+              target="_blank">
+
+              WhatsApp
+
+            </a>
+
+            <a class="btn btn-secondary"
+              href="mailto:contacto@numera.mx">
+
+              Correo
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="hero-card">
+
+          <div class="metric">
+            <h3>+Integración</h3>
+            <span>Procesos financieros organizados y optimizados.</span>
+          </div>
+
+          <div class="metric">
+            <h3>+Estrategia</h3>
+            <span>Planeación fiscal y financiera orientada a crecimiento.</span>
+          </div>
+
+          <div class="metric">
+            <h3>+Automatización</h3>
+            <span>Flujo moderno de información contable y administrativa.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="servicios">
+
+      <h2 class="section-title">
+        Servicios estratégicos.
+      </h2>
+
+      <p class="section-subtitle">
+        Una estructura financiera moderna debe combinar claridad, control y eficiencia operativa.
+      </p>
+
+      <div class="services">
+
+        <div class="card">
+          <div class="number">01</div>
+          <h3>Contabilidad y estados financieros</h3>
+          <p>Gestión contable orientada a claridad financiera y control operativo.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">02</div>
+          <h3>Consultoría fiscal</h3>
+          <p>Planeación y cumplimiento fiscal estratégico para personas físicas y negocios.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">03</div>
+          <h3>Nómina y seguridad social</h3>
+          <p>Administración de nómina, IMSS y procesos laborales relacionados.</p>
+        </div>
+
+        <div class="card">
+          <div class="number">04</div>
+          <h3>Asesoría financiera</h3>
+          <p>Análisis financiero para mejorar estabilidad y crecimiento.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="metodologia">
+
+      <h2 class="section-title">
+        Cómo trabajamos.
+      </h2>
+
+      <p class="section-subtitle">
+        Un enfoque basado en análisis, integración estratégica y seguimiento continuo.
+      </p>
+
+      <div class="steps">
+
+        <div class="step">
+          <span>01</span>
+          <h3>Diagnóstico integral</h3>
+          <p>Analizamos la situación financiera, contable y fiscal del negocio.</p>
+        </div>
+
+        <div class="step">
+          <span>02</span>
+          <h3>Integración estratégica</h3>
+          <p>Diseñamos procesos organizados y eficientes adaptados a cada operación.</p>
+        </div>
+
+        <div class="step">
+          <span>03</span>
+          <h3>Gestión continua</h3>
+          <p>Damos seguimiento constante para mantener estabilidad y control financiero.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="cta" id="contacto">
+
+      <div class="cta-box">
+
+        <h2 class="section-title">
+          Conversemos sobre el futuro financiero de tu negocio.
+        </h2>
+
+        <p>
+          NUMERA combina tecnología, estrategia financiera y procesos modernos para optimizar la operación de negocios y emprendedores.
+        </p>
+
+        <div class="buttons" style="justify-content:center;">
+
+          <a class="btn btn-primary"
+            href="https://wa.me/5210000000000"
+            target="_blank">
+
+            Agendar asesoría
+
+          </a>
+
+          <a class="btn btn-secondary"
+            href="mailto:contacto@numera.mx">
+
+            contacto@numera.mx
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <footer>
+
+      <div class="footer">
+
+        <div>
+          <strong>NUMERA</strong><br>
+          Oaxaca, México.
+        </div>
+
+        <div class="footer-links">
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="mailto:contacto@numera.mx">Correo</a>
+        </div>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
